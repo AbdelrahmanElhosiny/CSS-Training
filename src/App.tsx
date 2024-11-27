@@ -8,12 +8,12 @@ function App() {
     <Holder>
       <div className="navbar">
         <div className="logo">EduFlex.</div>
-        <div className="center-buttons">
-          <div className="center-button">Course</div>
-          <div className="center-button">Pricing</div>
-          <div className="center-button">Tutor</div>
-          <div className="center-button">Admission</div>
-          <div className="center-button">About</div>
+        <div className="center-links">
+          <div className="nav-link">Course</div>
+          <div className="nav-link">Pricing</div>
+          <div className="nav-link">Tutor</div>
+          <div className="nav-link">Admission</div>
+          <div className="nav-link">About</div>
         </div>
         <div className="end-button">Contact</div>
       </div>
@@ -57,27 +57,29 @@ const Holder = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    ${fonts.Primary}
 
     .logo {
+      ${fonts.PrimaryBold}
       color: ${color.purple};
       font-size: 1.3em;
     }
 
-    .center-buttons {
+    .center-links {
+      ${fonts.Secondary}
       display: flex;
       justify-content: center;
       gap: 3em;
-
-      .center-button {
-      }
     }
 
     .end-button {
+      ${fonts.Secondary}
       border: 0.1em solid;
       border-radius: 2em;
       padding: 0.5em 2em;
     }
+  }
+
+  .center-content {
   }
 `;
 
