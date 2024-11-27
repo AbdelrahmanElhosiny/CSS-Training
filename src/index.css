@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "primary";
+  src: url(/src/assets/Fonts/primary.ttf);
+}
+
+@font-face {
+  font-family: "secondary";
+  src: url(/src/assets/Fonts/secondary.woff);
+}

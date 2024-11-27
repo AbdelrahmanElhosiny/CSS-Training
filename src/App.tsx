@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
+import fonts from "./styles/fonts";
 import "./App.css";
+import color from "./styles/colors";
 
 function App() {
   return (
@@ -47,6 +49,36 @@ function App() {
   );
 }
 
-const Holder = styled.div``;
+const Holder = styled.div`
+  margin-top: 3em;
+  margin-inline: 5em;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ${fonts.Primary}
+
+    .logo {
+      color: ${color.purple};
+      font-size: 1.3em;
+    }
+
+    .center-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 3em;
+
+      .center-button {
+      }
+    }
+
+    .end-button {
+      border: 0.1em solid;
+      border-radius: 2em;
+      padding: 0.5em 2em;
+    }
+  }
+`;
 
 export default App;
