@@ -48,7 +48,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="right-content">Images</div>
+        <div className="right-content">
+          <SVG.Icons.sideImage />
+        </div>
       </div>
     </Holder>
   );
@@ -62,7 +64,7 @@ const Holder = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 
     .logo {
       ${fonts.Primary}
@@ -94,10 +96,11 @@ const Holder = styled.div`
   .center-content {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    border: 2px solid red;
     ${fonts.Primary}
 
     .left-content {
+      padding-top: 4em;
+
       .title {
         font-size: 5em;
         font-weight: 500;
@@ -180,7 +183,6 @@ const Holder = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: ${color.mint};
     }
   }
 `;
