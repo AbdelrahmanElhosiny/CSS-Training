@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "primary-bold";
-  src: url(/src/assets/Fonts/primary-bold.ttf);
-}
-
-@font-face {
   font-family: "secondary";
   src: url(/src/assets/Fonts/secondary.ttf);
 }

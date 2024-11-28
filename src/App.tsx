@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import fonts from "./styles/fonts";
 import "./App.css";
 import color from "./styles/colors";
+import SVG from "./assets/SVG";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       </div>
       <div className="center-content">
         <div className="left-content">
-          <div className="title">A new wat to learn & get knowledge</div>
+          <div className="title">A new way to learn & get knowledge</div>
           <div className="text">
             EduFlex is here for you with various courses & materials from
             skilled tutors all around the world
@@ -33,17 +34,21 @@ function App() {
               <div className="stat-number">15,2K</div>
               <div className="stat-text">Active students</div>
             </div>
+            <div className="vl"></div>
             <div className="stat">
               <div className="stat-number">4,5K</div>
               <div className="stat-text">Tutors</div>
             </div>
+            <div className="vl"></div>
             <div className="stat">
-              <div className="stat-number">Image</div>
+              <div className="stat-number">
+                <SVG.Icons.infinity />
+              </div>
               <div className="stat-text">Resources</div>
             </div>
           </div>
         </div>
-        <div className="right-content"></div>
+        <div className="right-content">Images</div>
       </div>
     </Holder>
   );
@@ -51,17 +56,19 @@ function App() {
 
 const Holder = styled.div`
   margin-top: 3em;
-  margin-inline: 5em;
+  margin-inline: 10em;
 
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5em;
 
     .logo {
-      ${fonts.PrimaryBold}
+      ${fonts.Primary}
       color: ${color.purple};
-      font-size: 1.3em;
+      font-size: 2em;
+      font-weight: bold;
     }
 
     .center-links {
@@ -69,17 +76,112 @@ const Holder = styled.div`
       display: flex;
       justify-content: center;
       gap: 3em;
+      font-size: 1.4em;
     }
 
     .end-button {
-      ${fonts.Secondary}
+      ${fonts.SecondaryMed}
       border: 0.1em solid;
       border-radius: 2em;
-      padding: 0.5em 2em;
+      padding: 0.5em 0em;
+      font-size: 1.4em;
+      width: 8em;
+      display: flex;
+      justify-content: center;
     }
   }
 
   .center-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    border: 2px solid red;
+    ${fonts.Primary}
+
+    .left-content {
+      .title {
+        font-size: 5em;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+
+      .text {
+        font-size: 1.6em;
+        width: 23em;
+        margin-bottom: 3rem;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        ${fonts.SecondaryMed}
+        gap: 1.5em;
+        margin-bottom: 6rem;
+
+        .join-button {
+          border: 0.1em solid ${color.purple};
+          border-radius: 2em;
+          padding: 0.4em 0em;
+          background-color: ${color.purple};
+          font-size: 1.4em;
+          color: white;
+          width: 9em;
+          display: flex;
+          justify-content: center;
+        }
+        .learn-button {
+          border: 0.1em solid;
+          border-radius: 2em;
+          padding: 0.4em 0em;
+          font-size: 1.4em;
+          width: 9em;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: 11em 2px 11em 2px 11em;
+        align-items: center;
+        ${fonts.Primary}
+
+        .stat {
+          display: grid;
+          grid-row: auto;
+          justify-content: center;
+          align-items: center;
+
+          .stat-number {
+            font-size: 2.5em;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .stat-text {
+            display: flex;
+            justify-content: center;
+            align-self: flex-end;
+            color: ${color.silver};
+            font-size: 1.3em;
+          }
+        }
+
+        .vl {
+          border-left: 2px solid ${color.gray};
+          display: flex;
+          height: 80%;
+        }
+      }
+    }
+
+    .right-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: ${color.mint};
+    }
   }
 `;
 
